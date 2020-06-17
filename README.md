@@ -1,2 +1,3 @@
 # Type-Definitions
-Some Type-Definitions for the game.
+
+This project gives some Type-Definitions to support Script-Developers
