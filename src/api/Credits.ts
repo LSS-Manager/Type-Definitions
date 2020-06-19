@@ -6,7 +6,6 @@ export interface Credits {
     credits_alliance_current: number;
     credits_alliance_total: number;
     credits_alliance_active: boolean;
-    // from here onwards currently en_GB and pl_PL only:
     user_name: string;
     user_id: number;
     user_toplist_position: number;
