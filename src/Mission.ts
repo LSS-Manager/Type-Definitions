@@ -120,6 +120,9 @@ interface Requirements {
     at_c?: number;
     at_m?: number;
     at_o?: number;
+    personnel_educations?: { // currently fr_FR only
+        [education: string]: number;
+    };
 }
 
 export interface Mission {
