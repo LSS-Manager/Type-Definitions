@@ -13,6 +13,10 @@ interface Additional {
     average_min_police_personnel?: number;
     average_min_fire_personnel?: number;
     swat_personnel?: number;
+    personnel_educations?: {
+        // currently fr_FR only
+        [education: string]: number;
+    };
 
     // Patients
     patient_specializations?: string;
@@ -120,9 +124,6 @@ interface Requirements {
     at_c?: number;
     at_m?: number;
     at_o?: number;
-    personnel_educations?: { // currently fr_FR only
-        [education: string]: number;
-    };
 }
 
 export interface Mission {
