@@ -3,7 +3,7 @@
 interface User {
     id: number;
     name: string;
-    role: string;
+    roles: string[];
 }
 
 export interface AllianceInfo {
