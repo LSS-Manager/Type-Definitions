@@ -18,7 +18,7 @@ interface Additional {
         [education: string]: number;
     };
 
-    //Filters Currently only en_US and en_UK
+    // Filters Currently only en_US and en_UK
     filter_id?: string;
 
     // Patients
