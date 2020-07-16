@@ -4,7 +4,7 @@ interface Extension {
     caption: string;
     available: boolean;
     enabled: boolean;
-    type_id: number; // Will soon be available in all games
+    type_id: number;
 }
 
 export interface Building {
