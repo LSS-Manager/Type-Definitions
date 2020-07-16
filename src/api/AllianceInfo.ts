@@ -1,5 +1,11 @@
 // The interface for `api/allianceinfo`
 
+interface User {
+    id: number;
+    name: string;
+    role: string;
+}
+
 export interface AllianceInfo {
     credits_total: number;
     credits_current: number;
@@ -7,4 +13,5 @@ export interface AllianceInfo {
     user_online_count: number;
     rank: number;
     finance_active: boolean;
+    users: User[];
 }
