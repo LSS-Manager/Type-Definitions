@@ -1,5 +1,5 @@
 {
-    "name": "missionchief-type-definitions",
+    "name": "@lss-manager/missionchief-type-definitions",
     "author": "LSS-Manager",
     "version": "0.0.1",
     "types": "src/index.d.ts",
@@ -21,5 +21,13 @@
         "singleQuote": true,
         "tabWidth": 4,
         "trailingComma": "es5"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "repository" : {
+        "type" : "git",
+        "url": "git://github.com/LSS-Manager/Type-Definitions.git",
+        "directory": ""
     }
 }
