@@ -1,6 +1,8 @@
 {
-    "name": "type-definitions",
-    "version": "1.0.0",
+    "name": "missionchief-type-definitions",
+    "author": "LSS-Manager",
+    "version": "0.0.1",
+    "types": "src/index.d.ts",
     "dependencies": {
         "@types/jquery": "^3.5.0",
         "typescript": "^3.9.5"
