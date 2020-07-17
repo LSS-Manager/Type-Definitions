@@ -57,7 +57,7 @@ let vehicleDistanceLeitstellenspiel: (
     sonderrechte: boolean
 ) => void;
 let vehicleDistanceDirectTimeToObject: (
-    e: number, // TODO Find out what e is. Found values: 20, 30, 190
+    speedInKMH: number,
     latitudeVehicle: number,
     longitudeVehicle: number,
     latitudeMission: number,
@@ -71,7 +71,7 @@ let vehicleDistanceDraw: (
     responseDelay: number
 ) => void;
 let vehicleDistanceDirect: (
-    e: number, // TODO Find out what e is. Found values: 190
+    speedInKMH: number,
     useFlyingRoute: 0 | 1,
     latitudeVehicle: number,
     longitudeVehicle: number,
