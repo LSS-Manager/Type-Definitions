@@ -1,7 +1,7 @@
 {
     "name": "@lss-manager/missionchief-type-definitions",
     "author": "LSS-Manager",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "types": "src/index.d.ts",
     "dependencies": {
         "@types/jquery": "^3.5.0",
