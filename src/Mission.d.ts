@@ -27,6 +27,8 @@ interface Additional {
     possible_patient_min?: number;
     possible_patient?: number;
     patient_uk_code_possible?: string[]; // en_GB only
+    possible_patient_specializations: string[]; // it_IT only
+    patient_it_code_possible: string[]; // it_IT only
 }
 
 interface Chances {
