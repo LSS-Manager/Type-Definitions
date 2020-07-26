@@ -1,5 +1,5 @@
 export function waterCalculatorSetPercent(
-    bar: HTMLDivElement,
+    bar: JQuery<HTMLDivElement>,
     percentage: number,
     offset: number
 ): void;
