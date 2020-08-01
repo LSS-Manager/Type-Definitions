@@ -4,7 +4,6 @@
 
 // TODO analyze all these functions
 
-declare function mapExpand(e: any): void;
 declare function mapViewOnly(): void;
 declare function mapViewDesignBigMap(): void;
 declare function mapViewResize(): void;
@@ -40,6 +39,8 @@ declare function building_maps_redraw(): void;
 declare function building_maps_draw(e: any): void;
 declare function buildingCaption(e: any): boolean;
 declare function buildingMarkerAdd(e: any): boolean;
+declare function constructBuildingListElement(e: any): void;
+declare function getBuildingMarkerIcon(e: any): string;
 declare function spliceLatLngs(e: any, t: any): void;
 declare function buildingMarkerBulkContentCacheDraw(): void;
 declare function currentHostname(): string;
@@ -167,19 +168,14 @@ declare function openExternalTelegramURL(e: any): void;
 declare function setupTimer(e: any): void;
 declare function updateTimer(e: any): void;
 declare function isDateValid(e: any): boolean;
-declare function leafletMissionPositionMarkerAdd(e: any): void;
-declare function leafletMissionPositionMarkerDelete(e: any): void;
-declare function onOverlayChanged(e: any): void;
-declare function mapkitMissionPositionMarkerAdd(e: any): void;
-declare function mapkitMissionPositionMarkerDelete(e: any): void;
-declare function mapkitMissionPositionMarkerDeleteAll(): void;
-declare function getMapFilterOptions(): void;
-declare function updateMapFilterOptions(e: any): void;
-declare function clearMap(e: any): void;
-declare function missionPositionMarkerAddAll(): void;
 declare function missionPositionMarkerAdd(e: any): void;
 declare function missionPositionMarkerDelete(e: any): void;
 declare function deleteMissionPosition(e: any): void;
+declare function initMapFiltersCollection(e: any): void;
+declare function getMapFilterOptions(): any;
+declare function updateMapFilterOptions(e: any): void;
+declare function clearMap(e: any): void;
+declare function currentMarkerTypeFilterTurnedOn(e: any): any;
 declare let map: any,
     alliance_building_show: any,
     geocoder: any,
@@ -190,6 +186,7 @@ declare let map: any,
     building_timers: any[],
     building_marker_image: string,
     mission_markers: any[],
+    mission_position_new_marker: any,
     mission_timers: any[],
     patient_timers: any[],
     mission_vehicles: any[],
@@ -320,6 +317,21 @@ declare let STORAGE_KEY_MOBILE_CLIENT_ID: string,
         getNameSpacedStorage: (e: any) => any;
         getFromStorages: (e: any, t: any) => any;
     },
-    pois_layer_group: any,
-    mission_poi_markers: any[],
-    mission_position_new_marker: any;
+    map_pois_service: {
+        getMissionPoiMarkersArray: () => any[];
+        leafletMissionPositionMarkerAdd: (t: any) => void;
+        leafletMissionPositionMarkerDelete: (t: any) => void;
+        mapkitMissionPositionMarkerAdd: (t: any) => void;
+        mapkitMissionPositionMarkerDelete: (t: any) => void;
+        mapkitMissionPositionMarkerDeleteAll: () => void;
+    },
+    map_filters_service: {
+        initialize: (a: any) => void;
+        getMapFiltersLayersForMap: () => {};
+        getMapFiltersLayers: () => {};
+        getFilterLayerByBuildingParams: (e: any) => any;
+        getFilterLayerByMissionParams: (e: any) => any;
+        onOverlayChanged: (e: any) => void;
+        massFiltersChange: (t: any, n: any) => void;
+        decorateFilterText: (t: any, i: any) => any;
+    };
