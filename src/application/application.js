@@ -1,8 +1,8 @@
 /*
- File: application-3538fe096d76f4d3d9bd05eb079a1be6.js
+ File: application-1a3462ac4863ff0b1f738be5963575bd.js
  Server: de_DE
- Date: 2020-07-01
- Time: 12:40 UTC
+ Date: 2020-07-05
+ Time: 05:10 UTC
  Settings for https://www.cleancss.com/javascript-beautify/:
     * Indent with 4 spaces
     * Braces with control statement
@@ -12,7 +12,7 @@
     * Space before conditional: "if(x)" / "if (x)"
     * Keep array indentation
     * Detect packers and obfuscators
-    *  Break lines on chained methods
+    * Break lines on chained methods
     * Use JSLint-happy formatting tweaks
  */
 
@@ -2344,7 +2344,7 @@ function aao_available(e, t) {
                     var a = aao_check("naw", $("#aao_" + e), o),
                       r = aao_check(h, $("#aao_" + e), o),
                       l = aao_check("rtw", $("#aao_" + e), o);
-                    if (a && (r || l)) {
+                    if (a || r && l) {
                         if (a && r && l) {
                             var c = aao_maxtime(-1, a),
                               u = aao_maxtime(-1, r),
