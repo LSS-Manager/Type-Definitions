@@ -1,8 +1,8 @@
 /*
- File: application-1a3462ac4863ff0b1f738be5963575bd.js
+ File: application-632391cee884e54dd7e284e484170017.js
  Server: de_DE
- Date: 2020-07-05
- Time: 05:10 UTC
+ Date: 2020-07-07
+ Time: 14:05 UTC
  Settings for https://www.cleancss.com/javascript-beautify/:
     * Indent with 4 spaces
     * Braces with control statement
@@ -4306,13 +4306,13 @@ Object.values || (Object.values = function (e) {
             gw_gefahrgut: "Adviseur Gevaarlijke Stoffen",
             gw_gefahrgut_only: "",
             gw_hoehenrettung: "Hoogte reddingsteam (HRT)",
-            gw_messtechnik: "Waarschuwings- en Verkenningsdienst",
+            gw_messtechnik: "Dienstbus Verkenningseenheid Brandweer",
             gw_oel_only: "Milieu wagen",
             gw_san: "",
             gw_taucher: "Waterongevallenvoertuig",
             gw_wasserrettung: "",
             gw_werkfeuerwehr: "",
-            gwl2wasser_only: "Alleen Slangenwagen / Tankwagen",
+            gwl2wasser_only: "Alleen Slangenwagen / Watertankwagen",
             hems: "",
             hlf_only: "",
             hlf_or_rw_and_lf: "",
@@ -4346,7 +4346,7 @@ Object.values || (Object.values = function (e) {
             rescueboat: "",
             rettungstreppe: "",
             rth_only: "Lifeliner",
-            schlauchwagen: "Slangenwagen / Tankwagen of Watertransportsysteem-haakarmbak",
+            schlauchwagen: "Slangenwagen / Watertankwagen of Watertransportsysteem-haakarmbak",
             seg_elw: "",
             sek_mtf: "",
             sek_zf: "",
