@@ -1,0 +1,9 @@
+transforming application.js into application.es6.js
+
+requires lebab: https://github.com/lebab/lebab
+
+execute following command in root directory of project:
+lebab -o ./src/application/application.es6.js -t arrow,arrow-return,for-of,for-each,arg-rest,arg-spread,obj-method,obj-shorthand,no-strict,exponent,multi-var,let,class,commonjs,template,default-param,destruct-param,includes ./src/application/application.js
+
+
+then goto https://www.cleancss.com/javascript-beautify/ and use the settings mentioned in file to beautify file.
