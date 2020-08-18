@@ -19,4 +19,8 @@ export interface Building {
     leitstelle_building_id: number;
     small_building: boolean;
     enabled: boolean;
+    generate_own_missions: boolean;
+    personal_count_target: number;
+    hiring_phase: 0 | 1 | 2 | 3;
+    hiring_automatic: boolean;
 }

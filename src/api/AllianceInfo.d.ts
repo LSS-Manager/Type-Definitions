@@ -4,6 +4,8 @@ interface User {
     id: number;
     name: string;
     roles: string[];
+    caption: string | null;
+    online: boolean;
 }
 
 export interface AllianceInfo {

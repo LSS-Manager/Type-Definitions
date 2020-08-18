@@ -2,6 +2,7 @@ interface Additional {
     expansion_missions_ids?: number[];
     followup_missions_ids?: number[];
     allow_rw_instead_of_lf?: boolean;
+    allow_arff_instead_of_lf?: boolean;
     only_alliance_mission?: boolean;
     max_possible_prisoners?: number;
 
@@ -26,7 +27,10 @@ interface Additional {
     patient_at_end_of_mission?: boolean;
     possible_patient_min?: number;
     possible_patient?: number;
+    patient_allow_first_responder_chance?: number;
+    allow_ktw_instead_of_rtw?: boolean;
     patient_uk_code_possible?: string[]; // en_GB only
+    patient_us_code_possible?: string[]; // en_US only
     possible_patient_specializations: string[]; // it_IT only
     patient_it_code_possible: string[]; // it_IT only
 }
