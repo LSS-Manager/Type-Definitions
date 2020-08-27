@@ -3,6 +3,7 @@ import { VehicleStates } from './VehicleStates';
 import { Building } from './Building';
 import { Credits } from './Credits';
 import { AllianceInfo } from './AllianceInfo';
+import { Settings } from './Settings';
 import { Mission } from '../Mission';
 
 export interface Index {
@@ -16,5 +17,6 @@ export interface Index {
     'api/buildings/ID/vehicles': Vehicle[]; // where ID is a number
     'api/credits': Credits;
     'api/allianceinfo': AllianceInfo;
+    'api/settings': Settings;
     'einsaetze.json': Mission[];
 }
