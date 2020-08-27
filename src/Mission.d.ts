@@ -5,6 +5,7 @@ interface Additional {
     allow_arff_instead_of_lf?: boolean;
     only_alliance_mission?: boolean;
     max_possible_prisoners?: number;
+    need_k9_only_if_guard_dogs_present?: boolean;
 
     // Guard missions
     duration?: string;
@@ -57,6 +58,7 @@ interface Chances {
     ovdp?: number;
     boats?: number; // de_DE: Boote
     elw_airport?: number;
+    k9?: number;
 
     // Patients
     nef?: number;
