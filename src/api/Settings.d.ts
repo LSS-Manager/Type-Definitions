@@ -18,7 +18,7 @@ export interface Settings {
     mission_expansion_fms_5: boolean;
     follow_up_missions_enabled: boolean;
     critical_care_enabled: boolean; //Uk-Only
-    disable_mission_group_1: boolean;
+    disable_mission_group_1: boolean; //US-Only , Disable Earthquake Missions true/false
     patients_use_nef_count: boolean; //IT-Only?
     progress_animation: boolean;
     leitstelle_building_id: number | null;
