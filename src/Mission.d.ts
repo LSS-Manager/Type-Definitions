@@ -6,6 +6,9 @@ interface Additional {
     only_alliance_mission?: boolean;
     max_possible_prisoners?: number;
     need_k9_only_if_guard_dogs_present?: boolean;
+    allow_drone_instead_of_investigation?: boolean; // only en_US
+    subsequent_missions_ids?: number[]; // only en_US
+    subsequent_mission_only?: boolean; // only en_US
 
     // Guard missions
     duration?: string;
@@ -20,7 +23,7 @@ interface Additional {
         [education: string]: number;
     };
 
-    // Filters Currently only en_US and en_UK
+    // Filters
     filter_id?: string;
 
     // Patients
@@ -82,6 +85,7 @@ interface Prerequisites {
     sek?: number;
     werkfeuerwehr?: number;
     rescue_dog_units?: number;
+    federalpolice_stations?: number; // only en_US
 }
 
 interface Requirements {
@@ -135,6 +139,12 @@ interface Requirements {
     at_c?: number;
     at_m?: number;
     at_o?: number;
+    sheriff?: number;
+    fbi?: number;
+    fbi_investigation?: number;
+    fbi_mcc?: number;
+    fbi_drone?: number;
+    fbi_bomb?: number;
 }
 
 export interface Mission {
