@@ -13,4 +13,6 @@ export interface Credits {
     user_email_registered: boolean;
     user_facebook_registered: boolean;
     user_apple_registered: boolean;
+    user_level: number;
+    user_level_title: string;
 }

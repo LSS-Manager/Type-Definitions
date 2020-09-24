@@ -9,6 +9,7 @@ interface Additional {
     allow_drone_instead_of_investigation?: boolean; // only en_US
     subsequent_missions_ids?: number[]; // only en_US
     subsequent_mission_only?: boolean; // only en_US
+    need_traffic_car_only_if_present?: boolean; // only en_GB
 
     // Guard missions
     duration?: string;
@@ -62,6 +63,7 @@ interface Chances {
     boats?: number; // de_DE: Boote
     elw_airport?: number;
     k9?: number;
+    traffic_car?: number; // en_GB only
 
     // Patients
     nef?: number;
@@ -145,6 +147,7 @@ interface Requirements {
     fbi_mcc?: number;
     fbi_drone?: number;
     fbi_bomb?: number;
+    traffic_car?: number;
 }
 
 export interface Mission {
