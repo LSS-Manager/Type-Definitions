@@ -23,4 +23,8 @@ export interface Building {
     personal_count_target: number;
     hiring_phase: 0 | 1 | 2 | 3;
     hiring_automatic: boolean;
+    is_alliance_shared: boolean;
+    alliance_share_credits_percentage: number; // visible when is_alliance_shared true
+    patient_count: number; // only visible at hospitals
+    prisoner_count: number; // only visible at police stations or allianceprisons
 }
