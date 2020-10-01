@@ -7,6 +7,7 @@
 
 export * from './chat.js';
 export * from './missionWindow';
+export * from './general'
 
 export function searchMission(): void;
 
