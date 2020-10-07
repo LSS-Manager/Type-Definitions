@@ -2,7 +2,7 @@
  * This is a temporary file!
  * */
 
-// TODO analyze all these functions
+import { EventMessage, RadioMessage } from './general';
 
 declare function mapViewOnly(): void;
 declare function mapViewDesignBigMap(): void;
@@ -11,20 +11,24 @@ declare function mapViewResizeDesignBigMap(): void;
 declare function mapViewRestore(): void;
 declare function vehicleSelectionReset(): void;
 declare function saveFcm(): void;
-declare function radioMessage(e: any): boolean;
-declare function vehicleSearch(e: any): any;
+declare function radioMessage(radioMessage: RadioMessage): boolean | void;
+declare function vehicleSearch(id: number): void;
 declare function missionLabel(): void;
 declare function vehicleLabel(): void;
 declare function setTitle(): void;
 declare function mapMoveToSearch(): void;
-declare function mapIsVisible(e: any): any;
-declare function buildingLoadContent(url: any): void;
+declare function mapIsVisible(e: any): any; //missing analysis
+declare function buildingLoadContent(url: string): void;
 declare function buildingResetContent(): void;
 declare function buildingResetContentWhenPossible(): void;
 declare function buildingMarkerReset(): void;
-declare function iconAnchorCalculate(e: any): any[];
-declare function eventAnnounce(e: any): void;
-declare function alliance_ignore_fms_set(e: any, t: any): void;
+declare function iconAnchorCalculate(iconDimensions: number[]): number[];
+declare function eventAnnounce(eventMessage: EventMessage): void;
+declare function alliance_ignore_fms_set(
+    allianceIgnoreFMS: boolean,
+    postRequest: boolean
+): void;
+// TODO: Analyze functions below
 declare function premium(e: any): void;
 declare function zoom_change(): void;
 declare function map_moved(): void;
@@ -82,8 +86,8 @@ declare function vehicleDriveReal(e: any): boolean;
 declare function allianceChatBanCountdown(e: any, t: any): void;
 declare function missionCountdown(e: any, t: any): void;
 declare function vehicleArrivalCountdown(e: any, t: any, i: any): void;
-declare function extensionCountdown(e: any, t: any): void;
-declare function educationCountdown(e: any, t: any): void;
+declare function extensionCountdown(remaining: number, id: number): void;
+declare function educationCountdown(remaining: number, id: number): void;
 declare function highlightElement(e: any): void;
 declare function creditsUpdate(e: any): void;
 declare function updateSaleCountDown(): void;
@@ -96,14 +100,14 @@ declare function coinsUpdate(e: any): void;
 declare function messageUnreadUpdate(e: any): void;
 declare function number_format(e: any, t: any): string;
 declare function formatTimeDescription(e: any): any;
-declare function formatTime(e: any, t: any): any;
+declare function formatTime(remaining: number, t?: boolean): any;
 declare function vehicleArrive(e: any): void;
 declare function rand(e: any, t: any): any;
 declare function missionSpeed(e: any): void;
 declare function missionRequest(): void;
 declare function lightboxShowClose(e: any): void;
 declare function lighboxCalculateHeight(): void;
-declare function lightboxOpen(e: any): void;
+declare function lightboxOpen(link: string): void;
 declare function lightboxAdjust(): void;
 declare function lightboxClose(): void;
 declare function distance(e: any, t: any, i: any, n: any): number;
@@ -145,7 +149,7 @@ declare function vehicle_group_available(
     calculate_time: any
 ): void;
 declare function aao_maxtime(e: any, t: any): any;
-declare function aao_available(e: any, t: any): void;
+declare function aao_available(arrId: number, calculateTime: boolean): void;
 declare function unix_timestamp(): number;
 declare function osrm_geometry_decode(e: any, t: any): any[];
 declare function change_state(e: any): void;
