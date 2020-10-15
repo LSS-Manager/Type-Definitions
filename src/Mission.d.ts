@@ -7,9 +7,12 @@ interface Additional {
     max_possible_prisoners?: number;
     need_k9_only_if_guard_dogs_present?: boolean;
     allow_drone_instead_of_investigation?: boolean; // only en_US
-    subsequent_missions_ids?: number[]; // only en_US
-    subsequent_mission_only?: boolean; // only en_US
-    need_traffic_car_only_if_present?: boolean; // only en_GB
+    subsequent_missions_ids?: number[]; // only en_US and da_DK
+    subsequent_mission_only?: boolean; // only en_US and da_DK
+    need_traffic_car_only_if_present?: boolean; // only en_GB and cs_CZ
+    need_elw_police_only_if_present?: boolean; // only cs_CZ
+    need_bomb_only_if_present?: boolean; // it_IT Only
+    need_police_horse_only_if_present?: boolean; // en_AU only
 
     // Guard missions
     duration?: string;
@@ -88,6 +91,8 @@ interface Prerequisites {
     werkfeuerwehr?: number;
     rescue_dog_units?: number;
     federalpolice_stations?: number; // only en_US
+    bomb_disposal_count?: number; // only cs_CZ
+    commerce_police_stations?: number; // it_IT Only
 }
 
 interface Requirements {
@@ -148,6 +153,9 @@ interface Requirements {
     fbi_drone?: number;
     fbi_bomb?: number;
     traffic_car?: number;
+    elw_police?: number;
+    commerce_police?: number; // it_IT Only
+    police_horse?: number; // en_AU only
 }
 
 export interface Mission {
