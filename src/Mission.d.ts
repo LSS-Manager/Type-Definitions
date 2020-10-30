@@ -9,10 +9,11 @@ interface Additional {
     allow_drone_instead_of_investigation?: boolean; // only en_US
     subsequent_missions_ids?: number[]; // only en_US and da_DK
     subsequent_mission_only?: boolean; // only en_US and da_DK
-    need_traffic_car_only_if_present?: boolean; // only en_GB, pl_PL and cs_CZ
+    need_traffic_car_only_if_present?: boolean; // only en_GB, pl_PL, cs_CZ and nb_NO
     need_elw_police_only_if_present?: boolean; // only cs_CZ
     need_bomb_only_if_present?: boolean; // it_IT Only
     need_police_horse_only_if_present?: boolean; // en_AU, sv_SE only
+    need_bike_police_only_if_present?: boolean; // nl_NL only
     allow_traffic_car_instead_of_fustw?: boolean; // pl_PL only
 
     // Guard missions
@@ -67,7 +68,8 @@ interface Chances {
     boats?: number; // de_DE: Boote
     elw_airport?: number;
     k9?: number;
-    traffic_car?: number; // en_GB, pl_PL and cs_CZ only
+    traffic_car?: number; // en_GB, pl_PL, cs_CZ and nb_NO only
+    bike_police?: number; // nl_NL only
 
     // Patients
     nef?: number;
@@ -153,10 +155,11 @@ interface Requirements {
     fbi_mcc?: number;
     fbi_drone?: number;
     fbi_bomb?: number;
-    traffic_car?: number;
+    traffic_car?: number; // en_GB, pl_PL, cs_CZ and nb_NO only
     elw_police?: number;
     commerce_police?: number; // it_IT Only
     police_horse?: number; // en_AU, sv_SE only
+    bike_police?: number; // nl_NL only
 }
 
 export interface Mission {
