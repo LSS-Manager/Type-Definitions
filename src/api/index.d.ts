@@ -15,6 +15,7 @@ export interface Index {
     // eslint-disable-next-line @typescript-eslint/ban-types
     'api/buildings/ID': Building | {}; // where ID is a number
     'api/buildings/ID/vehicles': Vehicle[]; // where ID is a number
+    'api/alliance_buildings': Building[];
     'api/credits': Credits;
     'api/allianceinfo': AllianceInfo;
     'api/settings': Settings;
