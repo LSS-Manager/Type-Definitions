@@ -3,6 +3,7 @@ interface allianceChatMessage {
     alliance_coadmin: 'false' | 'true';
     date: string; // time
     date_hidden: string; // actual date
+    iso_timestamp: string; //Time in ISO-Format
     message: string;
     mission_caption: string | null;
     mission_id: number | null;
