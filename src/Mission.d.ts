@@ -17,13 +17,15 @@ interface Additional {
     allow_traffic_car_instead_of_fustw?: boolean; // pl_PL only
 
     // Guard missions
-    duration?: string;
+    duration?: number;
+    duration_text?: string;
     guard_mission?: boolean;
 
     // Personnel
     average_min_police_personnel?: number;
     average_min_fire_personnel?: number;
     swat_personnel?: number;
+    height_rescue_personnel?: number;
     personnel_educations?: {
         // currently fr_FR only
         [education: string]: number;
