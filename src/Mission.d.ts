@@ -15,6 +15,7 @@ interface Additional {
     need_police_horse_only_if_present?: boolean; // en_AU, sv_SE only
     need_bike_police_only_if_present?: boolean; // nl_NL only
     allow_traffic_car_instead_of_fustw?: boolean; // pl_PL only
+    need_helicopter_bucket_only_if_present?: boolean; // de_DE only
 
     // Guard missions
     duration?: number;
@@ -162,6 +163,7 @@ interface Requirements {
     commerce_police?: number; // it_IT Only
     police_horse?: number; // en_AU, sv_SE only
     bike_police?: number; // nl_NL only
+    helicopter_bucket?: number; // de_DE only
 }
 
 export interface Mission {
