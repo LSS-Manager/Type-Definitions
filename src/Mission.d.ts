@@ -2,6 +2,7 @@ interface Additional {
     expansion_missions_ids?: number[];
     followup_missions_ids?: number[];
     allow_rw_instead_of_lf?: boolean;
+    allow_gwoil_instead_of_lf?: boolean;
     allow_arff_instead_of_lf?: boolean;
     only_alliance_mission?: boolean;
     max_possible_prisoners?: number;
