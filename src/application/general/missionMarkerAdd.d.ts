@@ -4,7 +4,7 @@ interface missionMarkerAdd {
     sw_start_in: number; //-1 for normal missions
     sw: boolean;
     tv:number; //unknown
-    mtid: number; //unknown
+    mtid: number; //missiontype ID
     kt: boolean;
     alliance_id: number | null; //own missions: null
     prisoners_count: number;
