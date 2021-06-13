@@ -22,3 +22,21 @@ export function aao(
     arrAttributeReadableName: string,
     amount: number
 ): string;
+
+export function aaoNearSelection(
+    option0: Parameters<typeof aao>[0],
+    option1: Parameters<typeof aao>[0],
+    option2: Parameters<typeof aao>[0],
+    amount: Parameters<typeof aao>[3],
+    combinationIdAndName: [
+        Parameters<typeof aao>[0],
+        Parameters<typeof aao>[2]
+    ],
+    arrElement: Parameters<typeof aao>[1]
+): string;
+
+export function aaoClickHandler(arrElement: ARRElement): boolean;
+
+export function vehicleGroupClickHandler(
+    vehicleGroupElement: ARRElement
+): boolean;

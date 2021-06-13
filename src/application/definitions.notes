@@ -1,9 +1,9 @@
-to create definitions file, rename application.js into application.js temporarily.
+to create definitions file, rename application.js into application.ts temporarily.
 Then run the following command in root directory of project:
-tsc src/application/application.js --declaration --outDir src/application/
+tsc src/application/application.ts --declaration --outDir src/application/
 
 afterwards run the eslint-command in same directory:
 
 eslint src/application/application.d.ts --fix
 
-afterwards rename application.js back to application.js
+afterwards rename application.ts back to application.js

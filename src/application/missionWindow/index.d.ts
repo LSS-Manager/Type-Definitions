@@ -5,3 +5,5 @@ export * from './water';
 export function missionWindowHasUpdate(missionId: number): void;
 
 export function missionAlarmTrailerCheck(buildingId?: number): true;
+
+export function vehicleSelectionReset(): void;

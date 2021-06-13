@@ -1,50 +1,10 @@
-/*
- * This is a temporary file!
- * */
-
-import { EventMessage, RadioMessage } from './general';
-
-declare function mapViewOnly(): void;
-declare function mapViewDesignBigMap(): void;
-declare function mapViewResize(): void;
-declare function mapViewResizeDesignBigMap(): void;
-declare function mapViewRestore(): void;
-declare function vehicleSelectionReset(): void;
-declare function saveFcm(): void;
-declare function radioMessage(radioMessage: RadioMessage): boolean | void;
-declare function vehicleSearch(id: number): void;
-declare function missionLabel(): void;
-declare function vehicleLabel(): void;
-declare function setTitle(): void;
-declare function mapMoveToSearch(): void;
-declare function mapIsVisible(e: any): any; //missing analysis
-declare function buildingLoadContent(url: string): void;
-declare function buildingResetContent(): void;
-declare function buildingResetContentWhenPossible(): void;
-declare function buildingMarkerReset(): void;
-declare function iconAnchorCalculate(iconDimensions: number[]): number[];
-declare function eventAnnounce(eventMessage: EventMessage): void;
-declare function alliance_ignore_fms_set(
-    allianceIgnoreFMS: boolean,
-    postRequest: boolean
-): void;
 // TODO: Analyze functions below
-declare function premium(e: any): void;
-declare function zoom_change(): void;
-declare function map_moved(): void;
-declare function building_load_alliance(): boolean;
-declare function building_load_alliance_app(
-    min_lat: any,
-    max_lat: any,
-    min_lng: any,
-    max_lng: any
-): boolean;
-declare function building_maps_redraw(): void;
 declare function building_maps_draw(e: any): void;
 declare function buildingCaption(e: any): boolean;
+declare function buildingVehicleGraphicCacheAdd(e: any): void;
 declare function buildingMarkerAdd(e: any): boolean;
 declare function constructBuildingListElement(e: any): void;
-declare function getBuildingMarkerIcon(e: any): string;
+declare function getBuildingMarkerIcon(e: any): any;
 declare function spliceLatLngs(e: any, t: any): void;
 declare function buildingMarkerBulkContentCacheDraw(): void;
 declare function currentHostname(): string;
@@ -54,6 +14,7 @@ declare function missionMarkerBlukDraw(): void;
 declare function missionMarkerReset(): void;
 declare function buildingsVehicleLoadVisible(): boolean;
 declare function buildingsVehicleLoad(building_id: any): void;
+declare function batchBuildingsVehicleLoad(building_id_array: any): void;
 declare function progressBarScrollUpdate(): void;
 declare function missionScrollUpdate(): void;
 declare function patientMarkerAddCombined(e: any): void;
@@ -85,11 +46,13 @@ declare function vehicleSonderrechte(e: any): void;
 declare function vehicleDriveReal(e: any): boolean;
 declare function allianceChatBanCountdown(e: any, t: any): void;
 declare function missionCountdown(e: any, t: any): void;
+declare function taskCountdown(e: any, t: any): void;
 declare function vehicleArrivalCountdown(e: any, t: any, i: any): void;
-declare function extensionCountdown(remaining: number, id: number): void;
-declare function educationCountdown(remaining: number, id: number): void;
+declare function extensionCountdown(e: any, t: any): void;
+declare function educationCountdown(e: any, t: any): void;
 declare function highlightElement(e: any): void;
 declare function creditsUpdate(e: any): void;
+declare function tasksUpdate(e: any, t: any): void;
 declare function updateSaleCountDown(): void;
 declare function setupSaleTimer(e: any, t: any, i: any): void;
 declare function saleEnded(e: any): void;
@@ -100,14 +63,14 @@ declare function coinsUpdate(e: any): void;
 declare function messageUnreadUpdate(e: any): void;
 declare function number_format(e: any, t: any): string;
 declare function formatTimeDescription(e: any): any;
-declare function formatTime(remaining: number, t?: boolean): any;
+declare function formatTime(e: any, t: any): any;
 declare function vehicleArrive(e: any): void;
 declare function rand(e: any, t: any): any;
 declare function missionSpeed(e: any): void;
 declare function missionRequest(): void;
 declare function lightboxShowClose(e: any): void;
 declare function lighboxCalculateHeight(): void;
-declare function lightboxOpen(link: string): void;
+declare function lightboxOpen(e: any): void;
 declare function lightboxAdjust(): void;
 declare function lightboxClose(): void;
 declare function distance(e: any, t: any, i: any, n: any): number;
@@ -117,6 +80,7 @@ declare function allianceMessageNew(e: any): void;
 declare function allianceNewsNew(e: any): void;
 declare function allianceForumNew(e: any): void;
 declare function newsNew(e: any): void;
+declare function graphicPackNewMessages(e: any): void;
 declare function play(e: any): boolean;
 declare function isLoggedIn(): boolean;
 declare function mobileShow(e: any): void;
@@ -138,18 +102,19 @@ declare function leitstelleSelectionOnly(e: any): void;
 declare function leitstelleSelection(e: any): void;
 declare function leitstelleSelectionActive(e: any): void;
 declare function leitstelleSelectionDeactive(e: any): void;
-declare function buildingSelectionOnly(e: any): void;
-declare function buildingSelection(e: any): void;
+declare function buildingSelectionOnly(e: any, t: any): void;
+declare function buildingSelection(e: any, t: any): void;
 declare function buildingSelectionActive(button: any): void;
 declare function buildingSelectionDeactive(button: any): void;
 declare function buildingSelectionSave(): void;
 declare function buildingSelectionLoad(): void;
+declare function searchStations(): void;
 declare function vehicle_group_available(
     vehicle_group_id: any,
     calculate_time: any
 ): void;
 declare function aao_maxtime(e: any, t: any): any;
-declare function aao_available(arrId: number, calculateTime: boolean): void;
+declare function aao_available(e: any, t: any): void;
 declare function unix_timestamp(): number;
 declare function osrm_geometry_decode(e: any, t: any): any[];
 declare function change_state(e: any): void;
@@ -172,6 +137,10 @@ declare function openExternalTelegramURL(e: any): void;
 declare function setupTimer(e: any): void;
 declare function updateTimer(e: any): void;
 declare function isDateValid(e: any): boolean;
+declare function flavouredAsset(e: any, t: any): any;
+declare function updateDailyBonusIcon(): void;
+declare function switchWorld(e: any): boolean;
+declare function updateButtonState(e: any, t: any): void;
 declare function missionPositionMarkerAdd(e: any): void;
 declare function missionPositionMarkerDelete(e: any): void;
 declare function deleteMissionPosition(e: any): void;
@@ -181,7 +150,7 @@ declare function updateMapFilterOptions(e: any): void;
 declare function clearMap(e: any): void;
 declare function currentMarkerTypeFilterTurnedOn(e: any): any;
 declare let map: any,
-    alliance_building_show: any,
+    alliance_member_buildings_show: any,
     geocoder: any,
     directionsService: any,
     building_eval_unload: any,
@@ -249,7 +218,9 @@ declare let map: any,
     sale_count_down: Date,
     count_down_title: any,
     saleTimeout: any,
-    apng_supported: boolean;
+    apng_supported: boolean,
+    gameFlavour: any,
+    i18nPrefix: any;
 declare let mapKitFactoryVehicleAnnotation: (
     e: any,
     t: any
@@ -262,14 +233,19 @@ declare let current_state: string,
         clear: () => void;
     };
 declare let dynamicLayouter: {
-    init: () => void;
-    initLayouter: () => void;
-    resize: () => void;
-    initCookiesBannerLayouter: () => void;
-    recalculateCookiesBanner: () => void;
-    resizeFunctions: () => {};
-    clear: () => void;
-};
+        init: () => void;
+        initLayouter: () => void;
+        resize: () => void;
+        initCookiesBannerLayouter: () => void;
+        recalculateCookiesBanner: () => void;
+        resizeFunctions: () => {};
+        clear: () => void;
+    },
+    BUTTON_STATES: {
+        loading: string;
+        enabled: string;
+        disabled: string;
+    };
 declare let windowIsTurbolinked: boolean,
     cookiesEu: {
         init: () => void;
@@ -339,3 +315,4 @@ declare let STORAGE_KEY_MOBILE_CLIENT_ID: string,
         massFiltersChange: (t: any, n: any) => void;
         decorateFilterText: (t: any, i: any) => any;
     };
+declare let originalTranslate: any;
