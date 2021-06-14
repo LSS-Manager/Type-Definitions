@@ -4,12 +4,11 @@
  Time:               2021-06-13T20:19:07+02:00
  */
 
-import { RadioMessage, EventMessage } from './general';
+import { RadioMessage, EventMessage } from './types';
 import { LatLng } from 'leaflet';
 
 export * from './chat';
 export * from './missionWindow';
-export * from './general';
 
 export function check_and_enable_apng_support(): void;
 
