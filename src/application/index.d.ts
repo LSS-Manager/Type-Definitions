@@ -7,7 +7,7 @@
 import { RadioMessage, EventMessage } from './general';
 import { LatLng } from 'leaflet';
 
-export * from './chat.js';
+export * from './chat';
 export * from './missionWindow';
 export * from './general';
 
