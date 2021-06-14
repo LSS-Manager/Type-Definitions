@@ -1,4 +1,4 @@
-type ARRElement = JQuery<HTMLAnchorElement>;
+import { ARRElement } from '../types';
 
 export function aao_building_check(
     buildingIds: number[],

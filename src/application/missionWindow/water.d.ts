@@ -3,4 +3,5 @@ export function waterCalculatorSetPercent(
     percentage: number,
     offset: number
 ): void;
+
 export function waterCalculator(missionId: number): void;
