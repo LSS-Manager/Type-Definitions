@@ -23,12 +23,13 @@
         "tabWidth": 4,
         "trailingComma": "es5"
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
-    },
     "repository": {
         "type": "git",
         "url": "git://github.com/LSS-Manager/Type-Definitions.git",
         "directory": ""
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/LSS-Manager/Type-Definitions/issues"
+    },
+    "homepage": "https://github.com/LSS-Manager/Type-Definitions#readme"
 }
