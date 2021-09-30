@@ -4,7 +4,7 @@
  Time:               2021-06-13T20:19:07+02:00
  */
 
-import { RadioMessage, EventMessage } from './types';
+import { RadioMessage, EventMessage, BuildingMarker } from './types';
 import { LatLng } from 'leaflet';
 
 export * from './chat';
@@ -79,7 +79,7 @@ export function map_moved(): void; // Used as Event-Listener Function
 
 export function building_load_alliance(): void; // load and show alliance buildings (up to 100) on visible part of map
 
-declare function building_load_alliance_app(
+export function building_load_alliance_app(
     min_lat: number,
     max_lat: number,
     min_lng: number,
@@ -87,3 +87,30 @@ declare function building_load_alliance_app(
 ): undefined | boolean; // load and show alliance buildings (up to 100) within bounds defined by parameters
 
 export function building_maps_redraw(): void;
+
+export function building_maps_draw(buildingMarker: BuildingMarker): void;
+
+export function buildingCaption(id: number): string | false;
+
+export function buildingVehicleGraphicCacheAdd(
+    buildingMarker: BuildingMarker
+): void;
+
+export function buildingMarkerAdd(
+    buildingMarker: BuildingMarker
+): boolean | undefined;
+
+export function constructBuildingListElement(
+    buildingMarker: BuildingMarker
+): void;
+
+export function getBuildingMarkerIcon(buildingMarker: BuildingMarker): any; //TODO: come back here later when analyzed flavouredAsset
+
+export function spliceLatLangs(
+    buildingMarker: BuildingMarker,
+    length: number
+): void;
+
+export function buildingMarkerBulkContentCacheDraw(): void;
+
+export function currentHostname(): string;

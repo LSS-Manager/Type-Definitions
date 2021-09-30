@@ -1,13 +1,4 @@
-// TODO: Analyze functions below
-declare function building_maps_draw(e: any): void;
-declare function buildingCaption(e: any): boolean;
-declare function buildingVehicleGraphicCacheAdd(e: any): void;
-declare function buildingMarkerAdd(e: any): boolean;
-declare function constructBuildingListElement(e: any): void;
-declare function getBuildingMarkerIcon(e: any): any;
-declare function spliceLatLngs(e: any, t: any): void;
-declare function buildingMarkerBulkContentCacheDraw(): void;
-declare function currentHostname(): string;
+
 declare function iconMapGenerate(e: any, t: any): void;
 declare function iconMapVehicleGenerate(e: any, t: any, i: any): void;
 declare function missionMarkerBlukDraw(): void;
@@ -141,6 +132,7 @@ declare function flavouredAsset(e: any, t: any): any;
 declare function updateDailyBonusIcon(): void;
 declare function switchWorld(e: any): boolean;
 declare function updateButtonState(e: any, t: any): void;
+declare function onAndroidBack(): boolean;
 declare function missionPositionMarkerAdd(e: any): void;
 declare function missionPositionMarkerDelete(e: any): void;
 declare function deleteMissionPosition(e: any): void;
@@ -306,7 +298,7 @@ declare let STORAGE_KEY_MOBILE_CLIENT_ID: string,
         mapkitMissionPositionMarkerDeleteAll: () => void;
     },
     map_filters_service: {
-        initialize: (a: any) => void;
+        initialize: (s: any) => void;
         getMapFiltersLayersForMap: () => {};
         getMapFiltersLayers: () => {};
         getFilterLayerByBuildingParams: (e: any) => any;
