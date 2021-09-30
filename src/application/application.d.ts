@@ -1,12 +1,4 @@
-declare function building_maps_draw(e: any): void;
-declare function buildingCaption(e: any): boolean;
-declare function buildingVehicleGraphicCacheAdd(e: any): void;
-declare function buildingMarkerAdd(e: any): boolean;
-declare function constructBuildingListElement(e: any): void;
-declare function getBuildingMarkerIcon(e: any): any;
-declare function spliceLatLngs(e: any, t: any): void;
-declare function buildingMarkerBulkContentCacheDraw(): void;
-declare function currentHostname(): string;
+
 declare function iconMapGenerate(e: any, t: any): void;
 declare function iconMapVehicleGenerate(e: any, t: any, i: any): void;
 declare function missionMarkerBlukDraw(): void;

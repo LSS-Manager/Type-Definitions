@@ -7,7 +7,7 @@ export interface BuildingMarker {
     longitude: number;
     latitude: number;
     icon: string;
-    vgi: number | null; // ID of vehicle graphick pack
+    vgi: number | null; // ID of vehicle graphic pack
     lbid: number; // ID of dispatch center assigned to (0 if assigned to none)
     show_vehicles_at_startpage: boolean;
     level: number | null;
