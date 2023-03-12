@@ -19,6 +19,7 @@ export interface Settings {
     follow_up_missions_enabled: boolean;
     critical_care_enabled: boolean; //Uk-Only
     disable_mission_group_1: boolean; //US-Only , Disable Earthquake Missions true/false
+    disable_mission_group_2: boolean; //US-Only , Disable tornado Missions true/false
     patients_use_nef_count: boolean; //IT-Only?
     progress_animation: boolean;
     leitstelle_building_id: number | null;
@@ -26,4 +27,8 @@ export interface Settings {
     start_view: 'map' | 'missions' | 'buildings' | 'chat' | 'radio';
     hide_faq_button: boolean;
     design_mode: number; //0=Default,1=Dark,2=Bright,3=Window Design,4=Window Design Dark
+    hide_anti_abuse_message: boolean;
+    disable_event_missions: boolean;
+    prisoner_transportation_disabled: boolean;
+    prisoner_transportation_delay: number;
 }

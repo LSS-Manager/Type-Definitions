@@ -20,4 +20,9 @@ export interface Index {
     'api/allianceinfo': AllianceInfo;
     'api/settings': Settings;
     'einsaetze.json': Mission[];
+    //V2
+    'api/v2/vehicles': Vehicle[];
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    'api/v2/vehicles/ID': Vehicle | {}; // where ID is a number
+    'api/v2/buildings/(id)/vehicles': Vehicle[]; // where ID is a number
 }
